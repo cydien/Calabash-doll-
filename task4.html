@@ -44,12 +44,14 @@ task4
    .num{
    	float: left;
    	width: 100%;
-   	height: 3.6em;
+   	height: 3.3em;
+   	background-color: white;
    }
    .password{
    	float: left;
    	width: 100%;
-   	height: 3.6em;
+   	height: 3.3em;
+   	background-color: white;
    }
    .forget{
    	text-align:center;
@@ -58,10 +60,10 @@ task4
    	height: 3em;
    }
    .blank{
-   	background-color: #e8e8e8;
-	height: 1%;
+   	float: left;
+   	background-color: #E0EEEE;
+	height: 0.6em;
 	width: 100%;
-	padding-top: 0.5em;
    }
    .biaodan{
 		color:#a3a3a3a;
@@ -70,23 +72,33 @@ task4
 		text-align: center;
 	}
    .clear{clear: both;}
-	a{float: right;}
+	a{float: right;
+	margin-right: 0.7em;
+	text-decoration:none;
+    color:#4dbeee;
+    font-size: 0.9em
+    }
 	button{
 	color: #f0f8ff;
 	width: 100%;
-	height: 4em;
+	height: 3.5em;
 	background-color:#4dbeee;
 	text-align: center;
 	letter-spacing:0.3em;
-	order: none;
+	border: none;
 	}
 	input{
 	margin-top: 0.9em;
-	border:none ;
+	border:none;
+	outline: medium;
 	height: 2.2em;
     width: 82%;
 	}
 	p{font-size: 0.9em}
+	body{
+	margin: 0em;
+	background-color: #E0EEEE;	
+	}
 </style>
 </head>
 <body Font-size=62.5%>
@@ -102,6 +114,7 @@ task4
 </div>
 <div class="clear"></div>
 </div>
+<div class="blank"></div>
 <form action="form_action.asp" method="get">
 <div class="biaodan">
 <div class="num">
@@ -109,17 +122,20 @@ task4
 <img src="1.png" width="50px" height="50px"></div>
 	 <input type="text" placeholder="请输入手机号"/>
 	 </div>
+
+<div class="blank"></div>
 <div class="password">
 <div class="logo">
 <img src="2.png" width="50px" height="50px"></div>
 	 <input type="password" placeholder="请输入密码"/>
 	 </div>
-    <button class="check" type="submit">登录</button>
+<div class="blank"></div>
+    <button class="check" type="button">登录</button>
 </div>
 </form>
 <div class="clear"></div>
 <div class="forget">
-<a href="">忘记密码?</a>
+<a href="">忘记密码</a>
 </div>
 <div class="clear"></div>
 </body>
