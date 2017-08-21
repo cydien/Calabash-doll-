@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<head>
+	<title>
+	task5
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,Users-scalable=0">
+	<style type="text/css">
+	.box{
+		width: 100%;
+		height: auto;
+	}
+	.beijing{
+		float: left;
+		width: 100%;
+		height:7em;
+		background-image: url(2.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		overflow:hidden;
+		z-index: 1;
+	}
+	.touxiang{
+		overflow: hidden;
+		float: left;
+		width: 3em;
+		height: 3em;
+		transform: translateY(-50%);
+		position: relative;
+		top:60%;
+		left: 2%;
+		background-color: #ffffff;
+		border-radius: 50%;
+	}
+    .wenben{
+    	float: right;  	
+		color: #ffffff;		
+		height: 4em;
+		padding-right:20%;
+		position: relative;
+		top:35%;
+    }
+    .jiange{
+    	
+    	float: left;
+    	width: 100%;
+    	height: 4em;
+    	background-color: white;
+    	border-bottom: 1px solid#adadad;
+    }
+    .nr1{
+    	float:left;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;        
+    	width: 80%;
+    	height: 2em; 
+    	line-height:2em;
+    }
+    .nr2{
+    	float:left;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    	width: 95%;
+    	height: 2em;
+    	line-height:2em;
+    }
+    .nr3{
+		float: left;
+		width: 5em;
+		height: 2em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: #adadad;
+		padding-left: 1em;
+		line-height:2em;
+	}
+	.nr4{
+    	float:left;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    	width: 50%;
+    	height: 2em; 
+    	color: red;
+    	line-height:2em;
+    }
+    .nr5{
+		width: 5em;
+		height: auto;		
+		color: #adadad;
+		padding-left: 1em;
+		line-height:auto;
+		flex-grow: none;
+	}
+	.nr6{
+    	float:left;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    	width: 5em;
+    	height: 2em; 
+    	line-height:2em;
+    }
+    .nr7{
+    	flex-grow: 1;
+    	width: 10em;
+    	height: auto; 
+    	line-height:2em;
+    	padding-right: 1em;
+    }
+	.jiange2{
+    	display: flex;
+    	justify-content: center;
+    	flex-wrap: nowrap;
+    	align-items: center;
+    	width: 100%;
+    	height:auto;
+
+    	background-color: white;
+    	border-bottom: 1px solid#adadad;
+    }
+    .footer{
+		width: 100%;
+		background-color: #ffffff;
+		width: 100%;
+		height: 3em;
+		text-align: center;		
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+	}
+	.footer1{	
+		float: left;
+		width: 45%;
+		border-radius: 10px;
+		border-width: 1px;
+		border-style:solid;
+		color: #66b3ff;
+		border-color: #66b3ff;
+		height: 2.4em;
+		line-height: 2.5em;
+		margin-left: 0.7em;
+		text-align: center;
+	}	
+	.footer2{
+		color: #ffffff;
+		float: right;
+		width:45%;
+		height: 2.4em;
+		margin-right: 0.7em; 
+		line-height: 2.5em;
+		border-radius: 10px;
+		border-width: 1px;
+		border-style:solid;		
+		border-color: #66b3ff;
+		background-color: #66b3ff;
+		text-align: center;		
+	}				
+	.clear{ clear:both;}
+	header{
+		float: left;
+		width: 100%;
+		height: 3em;
+		margin: 0em;
+		background-color: #66b3ff;
+		text-align: center;
+		position: fixed;
+		top: 0em;
+		z-index: 1;
+	}
+	body{
+		margin: 0;
+		padding-top: 2.5em;
+		padding-bottom: 3em;
+	}
+	h2{
+	    text-align: center;
+	    margin: 0;
+	    color: white;
+	    height: 3em;
+        line-height: 3em;
+        overflow: hidden;
+        display: block;
+        font-size: 1em;
+        font-weight: normal;
+    }
+    p{
+    	margin: 0;
+    }
+    span{margin:0;padding-left:0.8em;
+	align-items:center; 
+	display: -webkit-flex;
+	text-align: center;
+	border-left:0.3em solid #5fc0cd;
+    }
+	</style>
+	<body font-size: 62.5%>
+	<header>
+		<h2>个人主页</h2>
+	</header>
+	<div class="box">
+	<div class="beijing">
+		<div class="touxiang">
+			<img src="3.png" width="50em" height="50em">
+			</div>
+		<div class="wenben">
+			<p>  徐士林 55岁</p>
+				<p><img src="4.png" width="20em" height="25em">京城·四方·报纸林</p>		
+		    </div>
+	</div>
+	<div class="jiange">
+		<div class="nr1">
+		<span>专业技能
+        </span>
+		</div>
+	</div>
+	<div class="jiange">
+		<div class="nr2">
+			<img src="1.png" width="15em" height="15em">
+			住家
+			<img src="1.png" width="15em" height="15em">
+			不含餐
+		</div>
+	</div>
+	<div class="jiange">
+		<div class="nr3">
+			从业年限   |
+
+		</div>
+		<div class="nr6">
+			0~3年
+		</div>
+	</div>
+	<div class="jiange">
+		<div class="nr3">
+			工作时间   |
+		</div>
+		<div class="nr6">
+			全天
+		</div>
+	</div>
+	<div class="jiange">
+		<div class="nr3">
+			服务价格   |
+		</div>
+		<div class="nr4">
+			25元/小时
+		</div>
+	</div>
+	<div class="jiange2">
+	    <div class="nr5">
+	    	自我介绍   |
+	    </div>
+	    <div class="nr7">
+	    可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人，可以洗衣服做饭照顾老人。
+	    </div>
+	    </div>
+	<div class="footer">
+		<div class="footer1">
+		留言
+		</div>
+		<div class="footer2">
+		电话联系
+		</div>
+	</div>
+	    <div class="clear"></div>
+	    </div>
+	</boby>
+	</head>
