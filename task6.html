@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<script src="js/jquery/2.0.0/jquery.min.js"></script>
+<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<head>
+	<title>
+	task6
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,Users-scalable=0">
+	<style type="text/css">
+	.box{width: 100%;
+		height: auto;
+	overflow: hidden;}
+    header{
+    	float: left;
+		width: 100%;
+		height: 3em;
+		margin: 0em;
+		background-color: #66b3ff;
+		text-align: center;
+		position: fixed;
+		top: 0em;
+		z-index: 1;
+        margin:0 auto;
+    }
+    form{
+    	float: left;
+		width: 100%;
+		height: 3em;
+		position: fixed;
+		top: 3em;
+		z-index: 1;
+		text-align: center;
+    }
+    footer{   	
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+        margin:0 auto;
+        width: 100%;
+		height: 4.5em;
+		text-align: center;
+		display: flex;
+		justify-content:space-around;
+		flex-direction:row;
+		flex-wrap: nowrap;
+		align-items: center;
+		background-color: #f8fafb;
+		font-size: 5px;
+    }
+    body{
+    	margin: 0;
+    }
+    select{
+    	float: left;
+    	height: 3em;
+    	width: 33.3%;
+    	color: #66b3ff;
+    	border-style: none;
+    	line-height: 3em;
+    	padding: 0 4%;
+    	text-align: center;
+    }
+    p {
+    display: block;
+    text-align: center;
+}
+    .jiange{ 	
+    	float: left;
+    	width: 100%;
+    	height: 7em;
+    	background-color: white;
+    	border-bottom: 1px solid#adadad;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+    }
+    .jiange1{ 	
+    	float: left;
+    	width: 100%;
+    	height: 7em;
+    	margin-top: 6em;
+    	padding-left: 0.5em; 
+    	padding-top: 0.5em;
+    	background-color: white;
+    	border-bottom: 1px solid#adadad;
+    	border-top: 1px solid#adadad;
+    }
+    .jiange2{ 	
+    	float: left;
+    	width: 100%;
+    	height: 7em;
+    	margin-bottom: 4em;
+    	padding-left: 0.5em;
+    	margin-top: 0.5em;
+    	background-color: white;
+    	border-bottom: 1px solid#adadad;
+    }
+	    .daohang1{
+	    position: absolute;
+	    right: 50%;
+	    width: 4em;
+	    height: 2.5em;
+	    line-height: 2.5em;
+	    color: #ffffff;
+	    background-color: #55a8b3;
+	    border-radius: 15%;
+	    margin: 0.25em 0;
+	    }
+	    .daohang2{
+	    position: absolute;
+	    left: 50%;
+	    width: 4em;
+	    height: 2.5em;
+	    line-height: 2.5em;
+	    color: #66b3ff;
+	    background-color: #ffffff;
+	    border-radius: 15%;
+	    margin: 0.25em 0; 
+	    }
+	    .daohang3{
+	    position: absolute;
+	    right: 0.7em;
+	    width: 2.5em;
+	    height: 2.5em;
+	    }
+	    .daohang4{
+	    float: left;
+	    transform: scale(0.8,0.8);
+	}
+	    .neirong1 {
+	    width: 65%;
+	    height: 2em;
+	    color: #999999;
+	    line-height: 2em;
+	    }
+	    .neirong2 {
+	    width: 65%;
+	    height: 2em;
+	    float: left;
+	    line-height: 2em;
+	    padding-left: 2em;
+	    color: #333333;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    padding-bottom: 0.25em;
+	    }
+	    .neirong3 {
+	    color: #ff0000;
+	    height: 6em;
+	    width: 35%;
+	    float: right;
+	    line-height: 6em;
+	    display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+	    justify-content: space-around;
+	    align-items: center;
+	    text-align: center;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    }
+	    .neirong5 {
+	    float: left;
+	    padding-left: 0.5em;
+	    width: 60%;
+	    color: #999999;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    }
+	    .neirong6 {
+	    float: right;
+	    flex-grow: 1;
+	    color: #e63b0e;
+	    }
+	    .neirong7 {
+	    	width: 2em;
+	    	height: 2em;
+	    float: right;
+	    padding-right: 1em;
+	    }
+     .sprite {
+	    background-image: url(spritesheet.png);
+	    background-repeat: no-repeat;
+	    display: block
+	}
+.sprite-a {
+	    width: 40px;
+	    height: 41px;
+	    background-position: -5px -5px;
+	    transform: scale(0.7,0.7);	   
+	}
+.sprite-b {
+	    width: 42px;
+	    height: 44px;
+	    background-position: -55px -5px;
+	    transform: scale(0.6,0.6);
+	}
+.sprite-c {
+	    width: 19px;
+	    height: 33px;
+	    background-position: -107px -5px;
+	     transform: scale(0.6,0.6);
+	}
+.sprite-d {
+	    width: 46px;
+	    height: 40px;
+	    background-position: -136px -5px;
+	    transform: scale(0.6,0.6);
+	}
+.sprite-e {
+	    width: 24px;
+	    height: 24px;
+	    background-position: -192px -5px;
+	}
+.sprite-f {
+	    width: 19px;
+	    height: 23px;
+	    background-position: -226px -5px;
+	}
+.sprite-g {
+	    width: 42px;
+	    height: 41px;
+	    background-position: -255px -5px;
+	    transform: scale(0.6,0.6);
+	}
+.dibu1{
+		display: flex;
+		justify-content:space-around;
+		flex-direction:column;
+		flex-wrap: nowrap;
+		align-items: center;
+		color: #66b3ff;
+		text-align: center;
+}
+.dibu2{
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		margin: 0 0 1em 0;
+		flex-grow: none;
+		background-color: #66b3ff;
+		display: flex;
+		justify-content:space-around;
+		flex-direction:row;
+		flex-wrap: nowrap;
+		align-items: center;
+}
+.dibu3{
+		display: flex;
+		justify-content:space-around;
+		flex-direction:column;
+		flex-wrap: nowrap;
+		align-items: center;
+		color: #999999;
+}
+    </style>
+	<body>
+	<div class="box">
+	<header>
+		<div class="daohang1">找雇主</div>
+		<div class="daohang2">找护工</div>		
+		<div class="daohang3">
+			<i class="sprite sprite-b"></i>
+		</div>
+	</header>
+	<form>
+		<select >
+			<option style="text-align: center;">所在地</option>
+		</select>
+		<select >
+			<option>食宿</option>
+		</select>
+		<select >
+			<option>病人情况</option>
+		</select>
+	</form>	
+	<div class="jiange1">
+	<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+	    <div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+	    </div>
+	<div class="jiange">
+		<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+		<i class="sprite-e"></i>
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+		</div>
+	<div class="jiange">
+		<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+		</div>
+	<div class="jiange">
+		<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+		</div>
+	<div class="jiange">
+		<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+		</div>
+	<div class="jiange2">
+		<div class="neirong3">
+			<div class="neirong6">65元/小时</div>
+			<div class="neirong7">
+				<i class="sprite sprite-c"></i>
+			</div>
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-e"></i>
+		</div>
+		<div class="neirong5">
+			服务日期
+			</div>
+			</div>
+		<div class="neirong2">
+			2015-7-5至2015-7-12
+		</div>
+		<div class="neirong1">
+		<div class="daohang4">
+			<i class="sprite sprite-f"></i>
+		</div>
+		<div class="neirong5">
+			北京.通州.果园
+		</div>
+		</div>
+		</div>
+	<footer>
+	    <div class="dibu1">
+	    <i class="sprite sprite-d"></i>
+	    <p>首页</p>
+	    </div>
+	    <div class="dibu2">
+	    <i class="sprite sprite-a"></i>
+	    </div>
+	    <div class="dibu3">
+	    <i class="sprite sprite-g"></i>
+	    <p>我的</p>
+	    </div>	
+	</footer>
+	</div>
+	</body>
+	</head>
