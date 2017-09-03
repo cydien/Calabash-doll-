@@ -11,7 +11,8 @@
 	<style type="text/css">
 	.box{width: 100%;
 		height: auto;
-	overflow: hidden;}
+	overflow: hidden;
+}
     header{
     	float: left;
 		width: 100%;
@@ -23,6 +24,8 @@
 		top: 0em;
 		z-index: 1;
         margin:0 auto;
+        max-width: 640px;
+    	min-width: 320px;
     }
     form{
     	float: left;
@@ -32,6 +35,8 @@
 		top: 3em;
 		z-index: 1;
 		text-align: center;
+		max-width: 640px;
+    	min-width: 320px;
     }
     footer{   	
 		position: fixed;
@@ -48,9 +53,13 @@
 		align-items: center;
 		background-color: #f8fafb;
 		font-size: 5px;
+		max-width: 640px;
+    	min-width: 320px;
     }
     body{
     	margin: 0;
+    	max-width: 640px;
+    	min-width: 320px;
     }
     select{
     	float: left;
@@ -209,7 +218,7 @@
 	    width: 46px;
 	    height: 40px;
 	    background-position: -136px -5px;
-	    transform: scale(0.6,0.6);
+	    transform: scale(0.5,0.5);
 	}
 .sprite-e {
 	    width: 24px;
@@ -225,7 +234,7 @@
 	    width: 42px;
 	    height: 41px;
 	    background-position: -255px -5px;
-	    transform: scale(0.6,0.6);
+	    transform: scale(0.5,0.5);
 	}
 .dibu1{
 		display: flex;
@@ -240,7 +249,7 @@
 		width: 4em;
 		height: 4em;
 		border-radius: 50%;
-		margin: 0 0 1em 0;
+		margin: 0;
 		flex-grow: none;
 		background-color: #66b3ff;
 		display: flex;
